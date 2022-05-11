@@ -5,28 +5,25 @@ import { PRODUTOS } from '../mock-produtos';
 @Component({
   selector: 'app-produtos',
   templateUrl: './produtos.component.html',
-  styleUrls: ['./produtos.component.css']
+  styleUrls: ['./produtos.component.css'],
 })
 export class ProdutosComponent implements OnInit {
-
   produtos = PRODUTOS;
 
   produto: Produto = {
-    id: 1, 
-    name: 'Camisa do São Paulo', 
-    preco: 299, 
-    qtdEstoque: 61, 
-    marca: 'Adidas'
-  }
+    id: 1,
+    name: 'Picolé de Abacate ',
+    preco: 2,
+    qtdEstoque: 45,
+    marca: 'Sazon',
+  };
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   selectedProduct?: Produto;
   onSelect(produto: Produto): void {
-  this.selectedProduct = produto;
-}
-
+    this.selectedProduct = produto;
+  }
 }
